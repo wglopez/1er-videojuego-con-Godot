@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://cp5htytmahygg"]
 
-[ext_resource type="Script" path="res://Scenes/robot.gd" id="1_4mwhr"]
+[ext_resource type="Script" path="res://Scripts/robot.gd" id="1_4mwhr"]
 [ext_resource type="Texture2D" uid="uid://d1u4u1ccmsjyb" path="res://assets/player/Idle.png" id="1_rwdlu"]
 
 [sub_resource type="Animation" id="Animation_npgnh"]

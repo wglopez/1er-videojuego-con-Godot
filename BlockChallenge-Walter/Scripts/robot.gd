@@ -5,8 +5,10 @@ const JUMP_VELOCITY = -400.0
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 # var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
-var gravity = 1100
+var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var has_double_jumped = false;
+
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -45,4 +47,9 @@ func _physics_process(delta):
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 	
+# Move and detect collision
 	move_and_slide()
+
+func die():
+	# Por ejemplo, podrías reiniciar la escena
+	get_tree().reload_current_scene()

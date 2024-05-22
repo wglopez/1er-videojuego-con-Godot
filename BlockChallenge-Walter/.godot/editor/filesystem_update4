@@ -1,0 +1,4 @@
+res://Scenes/robot.tscn
+res://Scenes/mundo.tscn
+res://Scenes/bloque_obstaculo.tscn
+res://Scripts/robot.gd

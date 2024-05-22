@@ -1,0 +1,18 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1716345516
+icon.svg::CompressedTexture2D::4634198278970046759::1716341398::1716341496::1::::<><>::
+::res://assets/::1716341496
+background.png::CompressedTexture2D::5488732280656464121::1716341398::1716341496::1::::<><>::
+bloques obstaculos.png::CompressedTexture2D::7790470539471886715::1716341398::1716341496::1::::<><>::
+Tileset.png::CompressedTexture2D::6421618951645135410::1716341398::1716341496::1::::<><>::
+::res://assets/player/::1716341496
+Idle.png::CompressedTexture2D::9027257418222004197::1716341398::1716341496::1::::<><>::
+Jump.png::CompressedTexture2D::3250242906970607405::1716341398::1716341496::1::::<><>::
+Run.png::CompressedTexture2D::7402737215302029386::1716341398::1716341496::1::::<><>::
+::res://Scenes/::1716345497
+bloque_obstaculo.tscn::PackedScene::2891170083218220737::1716345424::0::1::::<><>::uid://di805814lgjrv::::res://assets/bloques obstaculos.png
+mundo.tscn::PackedScene::2633468537783638781::1716345424::0::1::::<><>::uid://ckg1vbjkar6o0::::res://assets/background.png<>uid://bhgrfcdafex26::::res://Scenes/bloque_obstaculo.tscn<>uid://cp5htytmahygg::::res://Scenes/robot.tscn<>uid://cxqxejtj4wj2y::::res://assets/Tileset.png<>res://Scripts/deathzone.gd
+robot.tscn::PackedScene::5888065594069254954::1716345424::0::1::::<><>::res://Scenes/robot.gd<>uid://d1u4u1ccmsjyb::::res://assets/player/Idle.png
+::res://Scripts/::1716345497
+deathzone.gd::GDScript::-1::1716345340::0::1::::<>Area2D<>::
+robot.gd::GDScript::-1::1716344267::0::1::::<>CharacterBody2D<>::
