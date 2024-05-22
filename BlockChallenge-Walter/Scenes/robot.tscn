@@ -1,0 +1,63 @@
+[gd_scene load_steps=7 format=3 uid="uid://cp5htytmahygg"]
+
+[ext_resource type="Script" path="res://Scenes/robot.gd" id="1_4mwhr"]
+[ext_resource type="Texture2D" uid="uid://d1u4u1ccmsjyb" path="res://assets/player/Idle.png" id="1_rwdlu"]
+
+[sub_resource type="Animation" id="Animation_npgnh"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_d4gu1"]
+resource_name = "idle"
+length = 4.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.8, 1.2, 1.6, 2, 2.4, 2.8, 3.2, 3.6, 4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_s5fsx"]
+_data = {
+"RESET": SubResource("Animation_npgnh"),
+"idle": SubResource("Animation_d4gu1")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ko8di"]
+size = Vector2(21, 25)
+
+[node name="robot" type="CharacterBody2D"]
+script = ExtResource("1_4mwhr")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, 8.99999)
+scale = Vector2(1, 0.90625)
+texture = ExtResource("1_rwdlu")
+hframes = 11
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_s5fsx")
+}
+speed_scale = 4.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 11.5)
+shape = SubResource("RectangleShape2D_ko8di")
